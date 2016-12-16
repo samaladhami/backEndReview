@@ -1,10 +1,35 @@
 <!DOCTYPE html>
-<html>
+<html ng-app='review'>
   <head>
     <meta charset="utf-8">
     <title></title>
   </head>
-  <body>
+  <body ng-controller='mainCtrl'>
     <h1>HI</h1>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" name="name" value="" placeholder='Name'>
+      <label for="phone">phone:</label>
+      <input type='text' placeholder='phone'>
+      <label for="email">email:</label>
+      <input type="text" name="name" value="" placeholder="email">
+      <button type="submit" name="button">Submit</button>
+    </form>
+    <div>
+      <ul ng-repeat='user in users'>
+        <li>
+          <h4>
+          {{user.name}}
+        </h4>
+          <p>
+            phone: {{user.cellPhone}} - email: {{user.email}}
+          </p>
+        </li>
+      </ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+    <script src="mainCtrl.js" charset="utf-8"></script>
+    <script src="mainService.js" charset="utf-8"></script>
   </body>
 </html>
