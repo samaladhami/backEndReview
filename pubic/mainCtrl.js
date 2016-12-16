@@ -6,5 +6,12 @@ angular.module('review')
       $scope.users = result
     })
   }
-  $scope.getUsers()
+
+  $scope.getUsers();
+
+  $scope.deleteUser = function(id){
+    mainService.deleteUser(id);
+    $scope.getUsers();
+
+  }
 })

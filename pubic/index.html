@@ -19,11 +19,12 @@
       <ul ng-repeat='user in users'>
         <li>
           <h4>
-          {{user.name}}
+          <b>{{user.name}}</b>
         </h4>
           <p>
             phone: {{user.cellPhone}} - email: {{user.email}}
           </p>
+          <button type="button" name="button" ng-click='deleteUser(user._id)'>Delete</button>
         </li>
       </ul>
     </div>

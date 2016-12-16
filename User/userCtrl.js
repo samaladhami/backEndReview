@@ -21,7 +21,7 @@ module.exports = {
   }
 
 ,deleteUser(req , res) {
-  console.log(req.body.id);
+  console.log(req.body);
   return User.remove({'_id': req.body.id} , ( err , response ) =>{
     if(err) {
       return res.status( 500 ).json( err );

@@ -1,4 +1,5 @@
 const express = require('express')
+ , bodyParser = require('body-parser')
       ,{json} = require('body-parser')
         ,cors = require('cors')
      ,session = require('express-session')
@@ -19,7 +20,7 @@ mongoose.connect( mongoUri, err => {
 } );
 
 
-
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use( json() );
 app.use(session( { secret:config.secret } ) );
 app.use(express.static(__dirname + '/pubic'));
