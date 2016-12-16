@@ -19,4 +19,14 @@ module.exports = {
           return res.status( 200 ).json( response )
         })
   }
+
+,deleteUser(req , res) {
+  console.log(req.body.id);
+  return User.remove({'_id': req.body.id} , ( err , response ) =>{
+    if(err) {
+      return res.status( 500 ).json( err );
+    }
+    return res.status( 200 ).json(response);
+  });
+}
 }
