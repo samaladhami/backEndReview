@@ -14,4 +14,8 @@ angular.module('review')
     $scope.getUsers();
 
   }
+  $scope.postUser = function(name , phone , email) {
+    mainService.postUser(name , phone , email);
+    $scope.getUsers();
+  }
 })
