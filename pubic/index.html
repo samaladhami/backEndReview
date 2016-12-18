@@ -22,13 +22,16 @@
         <div class="col-xs-6 subject">
           <b>REVIEW<span>APP</span></b>
         </div>
+        <div class="">
+
+        </div>
 
       </div>
     </nav>
 
     <section>
       <div class="container">
-        <div class="col-xs-8">
+        <div class="col-xs-6">
           <p>
             Post a user to the DB
           </p>
@@ -37,36 +40,39 @@
           <form method="post">
             <div class="form-group">
               <label  for="name"></label>
-              <input id='name' class='form-control input'  ng-model='name' type="text" value="" placeholder='Name' required="true">
+              <input id='name' class='form-control input'  ng-model='name' type="text" value="" placeholder='Name *' required="true">
             </div>
             <div class="form-group">
               <label   for="phone"></label>
-              <input id='phone' class='form-control input' ng-model='phone' type='text' placeholder='phone' required="true">
+              <input id='phone' class='form-control input' ng-model='phone' type='text' placeholder='phone *' required="true">
             </div>
             <div class="form-group">
               <label  for="email"></label>
-              <input id='email' class='form-control'  ng-model='email' type="text" name="name" value="" placeholder="email" required="true">
+              <input id='email' class='form-control'  ng-model='email' type="text" name="name" value="" placeholder="email *" required="true">
             </div>
             <button  class='btn btn-info' type="submit" name="button" ng-click='postUser(name, phone , email)'>Submit</button>
           </form>
 
         </div>
+        <div class="col-xs-6">
+          <div>
+            <ul ng-repeat='user in users'>
+              <li>
+                <h4>
+                <b>{{user.name}}</b>
+              </h4>
+                <h5>
+                  phone: {{user.cellPhone}} - email: {{user.email}}
+                </h5>
+                <button class='btn btn-danger' type="button" name="button" ng-click='deleteUser(user._id)'>Delete</button>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <div>
-      <ul ng-repeat='user in users'>
-        <li>
-          <h4>
-          <b>{{user.name}}</b>
-        </h4>
-          <p>
-            phone: {{user.cellPhone}} - email: {{user.email}}
-          </p>
-          <button type="button" name="button" ng-click='deleteUser(user._id)'>Delete</button>
-        </li>
-      </ul>
-    </div>
+
     <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="  crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.0/angular.min.js" charset="utf-8"></script>
