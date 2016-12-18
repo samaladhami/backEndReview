@@ -24,4 +24,12 @@ angular.module('review')
     $scope.phone = '';
     $scope.email = '';
   }
+
+  $scope.showSearch = function(){
+    $scope.show = !$scope.show;
+    if($scope.show){
+      $('.search').fadeIn( 500 )
+    }
+    
+  }
 })

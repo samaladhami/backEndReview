@@ -57,3 +57,15 @@ section div .users {
   background-color: white;
   padding-bottom: 3vh;
   border-bottom: 1px solid lightgray; }
+
+.sample-show-hide {
+  transition: all linear 0.5s; }
+
+.sample-show-hide.ng-hide {
+  opacity: 0; }
+
+.showBtn {
+  margin-bottom: 3vh;
+  border-radius: 5px; }
+  .showBtn:focus {
+    outline: none; }
