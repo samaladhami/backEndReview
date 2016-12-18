@@ -9,6 +9,8 @@ angular.module('review')
     })
   }
 
+
+
   this.deleteUser = function(id){
 
     return $http({
@@ -31,9 +33,7 @@ angular.module('review')
     const _email = document.getElementById('email');
 
     if (name && phone && email){
-      _name.style.background = '#F7F6F6'
-      _phone.style.background = '#F7F6F6'
-      _email.style.background = '#F7F6F6'
+
       return $http({
            method : 'POST'
         ,  url    : '/api/user'
@@ -51,21 +51,18 @@ angular.module('review')
       if (!name){
         _name.style.background = '#ffcaca';
       }
-      else{
-        _name.style.background = '#F7F6F6'
-      }
+
       if (!phone){
         _phone.style.background= '#ffcaca'
       }
-      else{
-        _phone.style.background = '#F7F6F6'
-      }
+
       if (!email){
         _email.style.background= '#ffcaca'
-      }
-      else{
-        _email.style.background = '#F7F6F6'
       }
     }
   }
 })
+
+const changeColor = function(obj){
+  obj.style.background = '#F7F6F6'
+}

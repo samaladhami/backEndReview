@@ -22,8 +22,19 @@
         <div class="col-xs-6 subject">
           <b>REVIEW<span>APP</span></b>
         </div>
-        <div class="">
-
+        <div class="col-xs-4">
+          <div class="dropdown">
+            <button class='btn btn-info dropdown-toggle' id='dropdownMenuButton'
+             data-toggle='dropdown' type="button" name="button" aria-haspopup="true" aria-expanded="false">Technology that I used <span style='color:black' class="caret"></span></button>
+            <div class="dropdown-menu" area-labelledby='dropdownMenuButton'>
+              <h5 class="dropdown-item" href="#">Angular.js</h5>
+              <h5 class="dropdown-item" href="#">MongoDB</h5>
+              <h5 class="dropdown-item" href="#">Mongoose</h5>
+              <h5 class="dropdown-item" href="#">Node.js</h5>
+              <h5 class="dropdown-item" href="#">Bootstap</h5>
+              <h5 class="dropdown-item" href="#">Sass</h5>
+            </div>
+          </div>
         </div>
 
       </div>
@@ -40,17 +51,17 @@
           <form method="post">
             <div class="form-group">
               <label  for="name"></label>
-              <input id='name' class='form-control input'  ng-model='name' type="text" value="" placeholder='Name *' required="true">
+              <input id='name' class='form-control input'  ng-model='name' type="text" value="" placeholder='Name *' onclick='changeColor(this)'>
             </div>
             <div class="form-group">
               <label   for="phone"></label>
-              <input id='phone' class='form-control input' ng-model='phone' type='text' placeholder='phone *' required="true">
+              <input id='phone' class='form-control input' ng-model='phone' type='text' placeholder='phone *' onclick='changeColor(this)'>
             </div>
             <div class="form-group">
               <label  for="email"></label>
-              <input id='email' class='form-control'  ng-model='email' type="text" name="name" value="" placeholder="email *" required="true">
+              <input id='email' class='form-control' ng-model='email' type="text" name="name" value="" placeholder="email *" onclick='changeColor(this)'>
             </div>
-            <button  class='btn btn-info' type="submit" name="button" ng-click='postUser(name, phone , email)'>Submit</button>
+            <button  class='btn btn-success' type="submit" name="button" ng-click='postUser(name, phone , email)'>Submit</button>
           </form>
 
         </div>
@@ -61,8 +72,8 @@
                 <h4>
                 <b>{{user.name}}</b>
               </h4>
-                <h5>
-                  phone: {{user.cellPhone}} - email: {{user.email}}
+                <h5 style="color:gray">
+                phone: {{user.cellPhone}} <br>email: {{user.email}}
                 </h5>
                 <button class='btn btn-danger' type="button" name="button" ng-click='deleteUser(user._id)'>Delete</button>
               </li>

@@ -14,8 +14,13 @@ angular.module('review')
     $scope.getUsers();
 
   }
+
+  // $scope.changeColor = mainService.changeColor
   $scope.postUser = function(name , phone , email) {
     mainService.postUser(name , phone , email);
     $scope.getUsers();
+    $scope.name = '';
+    $scope.phone = '';
+    $scope.email = '';
   }
 })

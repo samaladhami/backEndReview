@@ -20,6 +20,11 @@ header{
 }
 nav{
   background-color: $silver;
+
+  h5{
+    color:gray;
+    text-align: center;
+  }
   div{
     div{
       span{
@@ -57,4 +62,7 @@ section{
 }
 #name , #phone , #email{
   background-color: $silver;
+}
+#dropdownMenuButton{
+  margin-top: 16%
 }
