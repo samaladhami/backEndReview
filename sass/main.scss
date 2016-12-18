@@ -20,7 +20,8 @@ header{
 }
 nav{
   background-color: $silver;
-
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 6vh;
   h5{
     color:gray;
     text-align: center;
@@ -48,8 +49,15 @@ section{
 
       }
       form{
-
+        .search{
+          background: #f7f6f6;
+        }
       }
+    }
+    .users{
+      overflow-y: scroll;
+      background-color: white;
+      height: 70vh;
     }
   }
 }
@@ -66,3 +74,10 @@ section{
 #dropdownMenuButton{
   margin-top: 16%
 }
+
+.user{
+  margin-bottom: 5vh;
+      background-color: white;
+      padding-bottom: 3vh;
+      border-bottom: 1px solid lightgray;
+  }

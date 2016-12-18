@@ -12,7 +12,9 @@ header {
       margin: 0; }
 
 nav {
-  background-color: #F7F6F6; }
+  background-color: #F7F6F6;
+  border-bottom: 1px solid #eaeaea;
+  margin-bottom: 6vh; }
   nav h5 {
     color: gray;
     text-align: center; }
@@ -29,6 +31,14 @@ section div div p {
   font-family: inherit;
   color: #FF6A31; }
 
+section div div form .search {
+  background: #f7f6f6; }
+
+section div .users {
+  overflow-y: scroll;
+  background-color: white;
+  height: 70vh; }
+
 .line {
   background-color: #696969;
   width: 100%;
@@ -41,3 +51,9 @@ section div div p {
 
 #dropdownMenuButton {
   margin-top: 16%; }
+
+.user {
+  margin-bottom: 5vh;
+  background-color: white;
+  padding-bottom: 3vh;
+  border-bottom: 1px solid lightgray; }

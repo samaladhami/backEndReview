@@ -45,7 +45,11 @@ angular.module('review')
         , headers: {
             'Content-type': 'application/json;charset=utf-8'
         }
-      })
+      }).then(function successCallback(){
+        alert('User added')
+      } , function errorCallback(){
+        alert('Please enter valid informations');
+      });
     }
     else {
       if (!name){

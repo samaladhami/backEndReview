@@ -10,10 +10,11 @@ angular.module('review')
   $scope.getUsers();
 
   $scope.deleteUser = function(id){
-    mainService.deleteUser(id);
+    mainService.deleteUser(id)
     $scope.getUsers();
 
   }
+
 
   // $scope.changeColor = mainService.changeColor
   $scope.postUser = function(name , phone , email) {
